@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./assinatura.component.scss']
 })
 export class AssinaturaComponent implements OnInit {
+  souAluno: boolean = true;
+  souEscola: boolean = false;
+  nome: string = '';
 
   constructor() { }
 

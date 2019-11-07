@@ -3,7 +3,7 @@
   <div class="col-12">
     <div class="row">
       <div class="col-12 text-c">
-        <h4>Mais de 600 escolas e 25 mil alunos já se juntaram a nós <br> em busca de um melhor ensino e aprendizado</h4>
+        <h4>Mais de 600 escolas e 25 mil alunos já se juntaram a nós <br *ngIf="larguraTela > 728;"> em busca de um melhor ensino e aprendizado</h4>
       </div>
 
       <div class="col-12">
@@ -125,7 +125,7 @@
 
 <!--REFORÇO DO CTA COM MAIS DADOS / VOCÊ VAI FICAR DE FORA?-->
 <div class="row dados-graficos-cta py-5">
-  <div class="col-12 col-sm-6">
+  <div class="col-12 col-sm-7">
     <section class="circulos-dados">
       <div style="position: relative;">
         <div style="width: 180px; height: 180px" class="circulo-progresso-1"><!--CIRCULO DO PROGRESSO-->
@@ -179,9 +179,9 @@
     </section>
   </div>
 
-  <div class="col-12 col-sm-6 ficar-fora">
+  <div class="col-12 col-sm-5 mt-4 mt-sm-0 ficar-fora">
     <div class="row">
-      <div class="col-10 col-sm-8">
+      <div class="col-10">
         <h5>E você, vai ficar de fora?</h5>
         <p>Acompanhamos as grandes inovações do mundo da educação e queremos que você também tenha a chance de inovar em sua escola, conosco, e que possamos crescer e desenvolver cada vez mais.</p>
       </div>

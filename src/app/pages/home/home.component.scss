@@ -2,9 +2,9 @@
 
 //PRIMEIRA PARTE DO CTA
 .primeiro-cta-1 {
-  margin-top: 6rem;
+  margin-top: 6vh;
   height: 60vh;
-  min-height: 350px;
+  min-height: 250px;
   max-height: 480px;
   position: relative;
 
@@ -14,6 +14,16 @@
 
     & h4 {
       margin-bottom: 18px;
+    }
+  }
+}
+
+@media only screen and (max-width: 388px) {
+  .primeiro-cta-1 {
+    max-height: 400px;
+
+    & h4 {
+      font-size: 18px;
     }
   }
 }

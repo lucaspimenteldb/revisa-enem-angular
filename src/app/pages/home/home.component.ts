@@ -56,9 +56,19 @@ $( document ).on('scroll', () => {
 })
 
 export class HomeComponent implements OnInit {
+  larguraTela: number = window.innerWidth;
+
+  constructor() {
+    window.addEventListener('resize', () => {
+      this.larguraTela = window.innerWidth;
+    });
+  }
   ngOnInit(): void {
     const circuloPadding = document.getElementsByClassName('circulo') as HTMLCollectionOf<HTMLElement>;
     circuloPadding[2].style.margin = 'auto 20px auto';
+
+    console.log(this.larguraTela);
   }
+
 
 }

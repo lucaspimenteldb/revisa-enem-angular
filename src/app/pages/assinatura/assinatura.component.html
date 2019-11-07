@@ -1,1 +1,27 @@
-<p>assinatura works!</p>
+<div class="row mt-5">
+  <div class="col-12">
+    <h5>Qual perfil melhor lhe descreve?</h5>
+  </div>
+
+
+  <div class="col-4 pl-5 col-sm-2 mt-3">
+    <p>Sou escola</p>
+  </div>
+
+  <div class="col-4 col-sm-2 mt-3">
+    <p>Sou aluno</p>
+  </div>
+
+  <div class="col-12 pl-5">
+    <label for="nome-form">Nome</label><br>
+    <input type="text" id="nome-form" [(ngModel)]="nome">
+  </div>
+</div>
+
+<div class="row mt-5" *ngIf="souAluno">
+  <h6>Bem vindo, {{ nome }}</h6>
+</div>
+
+<div class="row mt-5" *ngIf="souEscola">
+  <h6>Bem vindo, {{ nome }}</h6>
+</div>
