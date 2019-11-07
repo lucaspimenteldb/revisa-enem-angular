@@ -1,0 +1,454 @@
+@import '../../../assets/variables-sass/variables';
+
+//PRIMEIRA PARTE DO CTA
+.primeiro-cta-1 {
+  margin-top: 6rem;
+  height: 60vh;
+  min-height: 350px;
+  max-height: 480px;
+  position: relative;
+
+  & .row {
+    position: relative;
+    top: 30px;
+
+    & h4 {
+      margin-bottom: 18px;
+    }
+  }
+}
+
+//SEGUNDA PARTE DOS ESTADOS EM QUE ESTAMOS
+.dados-estaduais-2 {
+  position: relative;
+  top: -100px;
+}
+
+.estados {
+  border-radius: $bordas;
+  background: $cor-principal;
+  color: white;
+
+  & .img-estados {
+    margin: 20px auto;
+    max-width: 100px;
+  }
+}
+
+.numeros-estados {
+  margin-top: 10px;
+
+  & p {
+    margin-bottom: 0;
+    font-size: 22px;
+  }
+
+}
+//LINHAS PARA ESTADOS
+.cls-1 {
+  stroke-dasharray: .001, 15;
+  stroke-linecap: round;
+  stroke-dashoffset: 5;
+  animation: bolinhas 3s linear infinite;
+}
+
+@keyframes bolinhas {
+  to {
+    stroke-dashoffset: 80;
+  }
+}
+
+.pontos-estados {
+  width: 180px;
+  border-radius: $bordas;
+  opacity: .5;
+}
+
+//REFORÇO DO CTA E GRÁFICO COM MAIS DADOS E CÍRCULOS DE PROGRESSO
+.circulo-progresso-1 {
+  position: absolute;
+  top: -13px;
+  left: -11px;
+}
+
+.circulo-progresso-2 {
+  position: absolute;
+  bottom: -14px;
+  right: -14px;
+}
+
+.circulo-progresso-3 {
+  position: absolute;
+  bottom: -22px;
+  right: -14px;
+}
+
+.circulo-linha {
+  stroke: $cor-principal;
+  fill: none;
+  stroke-width: 10;
+  stroke-linecap: round;
+}
+
+.animacao-circ-progresso {
+  animation: dash 2s ease forwards;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.dados-graficos-cta {
+  background: url("./../../../assets/imgs/fundos/folha-graficos.png") $cor-terciaria no-repeat 105% bottom/15%;
+  position: relative;
+  z-index: 1;
+
+  & h5 {
+    margin: 0;
+  }
+
+  & p {
+    margin-top: $marg-txt-ttl;
+  }
+
+  & .circulos-dados {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    & .circulo {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background: #FFF;
+      padding-top: calc(75px - 2rem);
+      box-shadow: $box-shadow;
+
+      //border-left: 8px solid $cor-principal;
+      //border-bottom: 8px solid $cor-principal;
+      //border-top: 8px solid transparent;
+      //border-right: 8px solid transparent;
+
+      & p {
+        margin: 0;
+        line-height: 1rem;
+        font-size: .9rem;
+      }
+    }
+  }
+
+  & .ficar-fora {
+    display: flex;
+    align-items: center;
+
+    & p {
+      padding-right: 10px;
+    }
+  }
+
+  .circulos-dados::after {
+    content: '';
+    position: absolute;
+    background: url("./../../../assets/imgs/fundos/linhas-atras-circulos.png") no-repeat 30% 75%/80%;
+    width: 300px;
+    height: 300px;
+    z-index: -1;
+  }
+}
+
+
+//VÁRIAS FERRAMENTAS NUM SÓ APP
+.imgs-celulares {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.fundo-roxo {
+  background: $cor-principal;
+  border-radius: $bordas;
+  color: white;
+
+  & h5 {
+    margin-bottom: 0;
+  }
+
+  & p {
+    margin-top: $marg-txt-ttl;
+  }
+
+  & .pessoas-png {
+    max-width: 120%;
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .cel-ferramentas {
+    position: relative;
+    right: 60px;
+  }
+}
+
+.cel-ferramentas {
+  max-width: 210px;
+  padding: 0 10px;
+}
+
+
+//PROFESSORES E ALUNOS ESTÃO CONECTADOS PELO CELULARZINHO AGORA
+.cel-professores {
+  max-width: 210px;
+  position: relative;
+  padding: 0 10px;
+}
+
+.prof-digimon {
+  padding-top: 3rem;
+
+  & .prof-conect-img {
+    transform: scaleX(-1);
+    max-width: 60%;
+    margin-left: auto;
+    display: block;
+    //position: absolute;
+    //bottom: -115px;
+    //right: 0;
+    //width: 48%;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .prof-digimon {
+    order: 1;
+
+  }
+
+  .img-digimon {
+    order: 2;
+  }
+}
+
+//NOSSOS PRODUTOS PARA ESCOLAS E PARA ALUNOS
+.card-produtos {
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+  border: none;
+
+  & h5 {
+    margin-top: 30px;
+  }
+
+  & .linha-aluno, .linha-escola {
+    height: 2px;
+    width: 70%;
+    border: none;
+    border-radius: 2px;
+    margin: 5px auto;
+  }
+
+  & .linha-aluno {
+    background: rgb(15,15,15);
+  }
+
+  & .linha-escola {
+    background: #fff;
+  }
+
+  & .card-body {
+    max-width: 330px;
+
+    & p {
+      margin: 0 0 8px 8px;
+      position: relative;
+      max-width: 240px;
+    }
+
+    & p::before {
+      content: '';
+      position: absolute;
+      top: 8px;
+      left: -12px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: $cor-principal;
+    }
+
+    & button {
+      display: block;
+      margin: 40px auto 20px;
+    }
+  }
+}
+
+.alunos {
+  background: url("./../../../assets/imgs/produtos/produtos-alunos.png") $cor-terciaria no-repeat left 100%/35%;
+}
+
+.escolas {
+  background: url("./../../../assets/imgs/produtos/produtos-escolas.png") #20384e no-repeat right 100%/55%;
+  color: white;
+}
+
+//QUEM SOMOS, O QUE OFERECEMOS E COMO FAZEMOS MÁGICA
+.wrapper-gradient {
+  margin-top: 100px;
+  background: url("./../../../assets/imgs/fundos/fundo-sobre.png") #fff no-repeat -20px 10%/70%;
+  //background: -moz-linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 70%, rgba(255,255,255,0) 80%, rgba(255,255,255,1) 90%);
+  //background: -webkit-linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 70%, rgba(255,255,255,0) 80%, rgba(255,255,255,1) 90%);
+  //background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 70%, rgba(255,255,255,0) 80%, rgba(255,255,255,1) 90%);
+  //filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#ffffff",GradientType=1);
+}
+
+.sobre {
+  margin-bottom: 2px;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.card {
+  border-radius: $bordas;
+  box-shadow: $box-shadow;
+
+  & .card-img-top {
+    width: 108%;
+    position: relative;
+    bottom: 10px;
+    right: 4%;
+  }
+
+  & .card-subtitle {
+    font-size: 1.1rem;
+    font-weight: 600;
+    position: relative;
+    margin-top: 35px;
+    color: $cor-secundaria;
+  }
+
+  .card-subtitle::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    margin-left: 10px;
+    top: 11px;
+    border-bottom: 2px solid $cor-secundaria;
+  }
+}
+
+//DEPOIMENTOS DA GARELINHA
+.depoimentos {
+  background: url('./../../../assets/imgs/fundos/fundo-depo.png') #fff no-repeat 0 0/100%;
+  padding-top: 120px;
+  margin-top: 4rem;
+
+  & div img {
+    border-radius: $bordas;
+  }
+
+  & .nome-depoimentos {
+    font-size: 1.2rem;
+    position: relative;
+    margin-top: 15px;
+  }
+
+  .nome-depoimentos::before {
+    content: '';
+    position: absolute;
+    bottom: -40%;
+    right: 25px;
+    width: 200%;
+    min-width: 400px;
+    max-width: 700px;
+    height: 40px;
+    border: 3px solid $cor-secundaria;
+    border-radius: $bordas;
+  }
+}
+
+#carouselDepo {
+  width: 100%;
+
+  .carousel-indicators {
+    bottom: -40px;
+
+    & li {
+      border-radius: 10px;
+    }
+  }
+}
+
+.carousel-item {
+  margin-top: 20px;
+
+  & article {
+    max-width: 600px;
+    min-width: 300px;
+    width: 50%;
+    margin-left: 8.333333%;
+    padding-left: 15px;
+    display: inline-block;
+    //float: left;
+  }
+
+  & img {
+    max-width: 300px;
+    min-width: 150px;
+    width: 33%;
+    margin-left: 8.33333%;
+    transform: translateX(150px) translateY(-30px);
+    opacity: 0;
+    transition: transform ease-in 300ms, opacity ease-in 300ms;
+  }
+
+  @media only screen and (max-width: 930px) {
+    & img {
+      position: absolute;
+      top: 30px;
+      margin-left: 4%;
+    }
+  }
+
+  @media only screen and (max-width: 586px) {
+    & img {
+      display: none;
+    }
+  }
+}
+
+
+.carousel-item.active {
+  & img {
+    transform: translateX(0) translateY(-30px);
+    opacity: 1;
+  }
+}
+
+.ultimo-cta {
+  margin-top: 200px;
+  margin-bottom: 80px;
+  position: relative;
+  z-index: 1;
+
+  & h4 {
+    margin-bottom: 30px;
+  }
+}
+
+.ultimo-cta::before {
+  content: '';
+  position: absolute;
+  background: url("./../../../assets/imgs/fundos/ult-cta.png") no-repeat 0 80%/100%;
+  width: 100px;
+  height: 100px;
+  bottom: 0;
+  left: calc(50% - 50px);
+  z-index: -1;
+}

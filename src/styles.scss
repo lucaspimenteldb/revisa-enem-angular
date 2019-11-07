@@ -1,1 +1,89 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500,600,700&display=swap');
+@import './assets/variables-sass/variables';
+
+//FONTES
+h5, h4 {
+  font-weight: 700;
+}
+
+p {
+  font-weight: $font-w;
+}
+
+//ESTILO PRINCIPAL DOS BOTÕES
+.btn-estilo {
+  display: block;
+  margin: 0 auto;
+  padding: 7px 40px;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: $bordas-botoes;
+  box-shadow: $box-shadow;
+  background: $cor-principal;
+  transition: transform ease-in-out 300ms, box-shadow ease-in-out 300ms, background 700ms;
+}
+
+@media (hover: hover) {
+  .btn-estilo:hover {
+    box-shadow: 2px 3px 10px rgba(0, 0, 0,.55);
+    transform: scale(1.1);
+    color: white;
+    background: #9f3771 radial-gradient(circle, transparent 1%, #9f3771 1%) center/15000%;
+  }
+}
+
+@media only screen and(min-width: 480px) {
+  .btn-estilo:active {
+    box-shadow: 2px 3px 10px rgba(0, 0, 0,.55);
+    transform: scale(1.1);
+    background-color: $cor-terciaria;
+    background-size: 100%;
+    transition: background-color 0s;
+  }
+}
+
+@media only screen and(max-width: 479px) {
+  .btn-estilo:active {
+    box-shadow: 2px 3px 10px rgba(0, 0, 0,.55);
+    transform: scale(1.1);
+  }
+}
+
+
+body {
+  font-family: 'Quicksand', sans-serif ;
+  background: url("./assets/imgs/fundos/bg-principal-1.png") fixed no-repeat 50% 290px/115%;
+}
+
+.container-fluid {
+  padding: 0;
+  max-width: 1366px;
+
+  & .row {
+    margin-left: 0;
+    margin-right: 0;
+    position: relative;
+  }
+
+  & .text-c {
+    text-align: center;
+  }
+
+  & .card-max-w {
+    max-width: 345px;
+  }
+
+  & .card-of-hd {
+    overflow: hidden;
+  }
+
+  & .bg-branco {
+    background: #fff;
+    background: -moz-linear-gradient(0deg, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#ffffff",GradientType=1);
+  }
+}
